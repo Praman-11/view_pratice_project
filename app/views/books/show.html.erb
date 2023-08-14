@@ -1,0 +1,15 @@
+<center>
+<h1 style="color:#8CCEF9;"><%= @book.tittle %></h1>
+<p  style="color:#A9DFBF;"><b><%= @book.content %></b></p>
+<p >
+  <%= image_tag @book.book_image, size: '200x200' %>
+</p>
+<ul>
+  <li><b><%= link_to "Edit", edit_book_path(@book) %></b></li>
+  <li><b><%= link_to "Destroy", book_path(@book), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %></b></li>
+</ul>
+</center>
+
